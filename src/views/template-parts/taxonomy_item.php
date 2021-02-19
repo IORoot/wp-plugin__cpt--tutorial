@@ -9,7 +9,7 @@
 
 ?>
 
-<li class="grid-item pr-2 pb-2 md:pr-4 md:pb-4 lg:pr-10 lg:pb-10 inline-block w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5" >
+<li class="grid-item pr-2 pb-2 md:pr-4 md:pb-4 lg:pr-10 lg:pb-10 inline-block w-full md:w-1/3 lg:w-1/4 xl:w-1/5" >
                 
     <a class="flex flex-col bg-black border border-fog hover:border-smoke rounded-md overflow-hidden" href="<?php echo get_permalink($post);?>">
         
@@ -17,7 +17,7 @@
             <div class="text-mist text-xs font-thin border border-mist absolute top-2 right-12 bg-night px-2 py-0.5 rounded">VIDEO</div>
         </div>
         
-        <div class="flex-1 flex flex-col justify-center p-6">
+        <div class="flex-1 flex flex-col justify-center p-4">
             <div class="text-white text-lg max-h-8 leading-4 mb-1 pb-1 truncate">
                 <span class="text-smoke text-lg pr-1">
                     <?php
