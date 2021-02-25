@@ -32,20 +32,20 @@ class metadata
                 },
             ) );
 
-            // random posts
-            register_rest_route( 'tutorial', '/random', array(
-                'methods'   =>  'GET',
-                'callback'  => [$this, 'get_random'],
-            ) );
+        } );
 
+
+        /**
+         * Add "RANDOM" as an orderby parameter.
+         */
+        add_filter( 'rest_tutorial_collection_params', function( $query_params ) {
+            $query_params['orderby']['enum'][] = 'rand';
+            return $query_params;
         } );
         
     }
 
 
-    public function get_random()
-    {
-        return \get_posts( [ 'orderby' => 'rand', 'posts_per_page' => 10] );
-    }
+
 
 }
