@@ -32,16 +32,20 @@ class metadata
                 },
             ) );
 
+            // random posts
             register_rest_route( 'tutorial', '/random', array(
                 'methods'   =>  'GET',
-                'callback'  => function() {
-                    return get_posts( array( 'post_type' => 'tutorial', 'orderby' => 'rand', 'posts_per_page' => 10) );
-                },
+                'callback'  => [$this, 'get_random'],
             ) );
-        
 
         } );
-
         
     }
+
+
+    public function get_random()
+    {
+        return \get_posts( [ 'orderby' => 'rand', 'posts_per_page' => 10] );
+    }
+
 }
