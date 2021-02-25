@@ -33,10 +33,12 @@ class metadata
             ) );
 
             register_rest_route( 'tutorial', '/random', array(
-                'get_callback' => function( $post_arr ) {
+                'methods'   =>  'GET',
+                'callback'  => function() {
                     return get_posts( array( 'post_type' => 'tutorial', 'orderby' => 'rand', 'posts_per_page' => 10) );
                 },
             ) );
+        
 
         } );
 
