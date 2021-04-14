@@ -28,7 +28,7 @@ class metadata
 
             register_rest_field( 'tutorial', 'imageURL', array(
                 'get_callback' => function( $post_arr ) {
-                    return get_the_post_thumbnail_url( $post_arr['id'], 'medium' );
+                    return get_the_post_thumbnail_url( $post_arr['id'], 'thumbnail' );
                 },
             ) );
 
