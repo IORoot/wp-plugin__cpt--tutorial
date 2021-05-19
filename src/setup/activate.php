@@ -1,21 +1,28 @@
 <?php
 
-namespace andyp\labs\cpt\tutorial\setup;
+namespace andyp\cpt\tutorial\setup;
 
 class activate
 {
 
-    public function __construct()
+    private $config;
+
+    public function __construct($config)
     {
-        register_activation_hook( ANDYP_LABS_CPT_TUTORIAL_PLUGIN_FILE, [$this, 'flush_post_types'] );
+        $this->config = $config;
+        $const  = 'ANDYP_CPT_'.strtoupper($config['post_type']).'_FILE';
+        register_activation_hook( constant($const), [$this, 'flush_post_types'] );
     }
 
     public function flush_post_types() {
 
-        $tutorial = new \andyp\labs\cpt\tutorial\initialise;
-        $tutorial->setup_cpt();
-        $tutorial->register_cpt();
-        $tutorial->run_cpt();
+        $ns = '\\andyp\\cpt\\'.$this->config['post_type'].'\\initialise';
+
+        $cpt = new $ns;
+        $cpt->set_config($this->config);
+        $cpt->setup_cpt();
+        $cpt->register_cpt();
+        $cpt->run_cpt();
 
         global $wp_rewrite;
         $wp_rewrite->flush_rules();

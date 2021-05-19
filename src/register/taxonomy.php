@@ -1,6 +1,6 @@
 <?php
 
-namespace andyp\labs\cpt\tutorial\register;
+namespace andyp\cpt\tutorial\register;
 
 class taxonomy
 {

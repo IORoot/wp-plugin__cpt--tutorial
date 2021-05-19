@@ -1,7 +1,6 @@
 <?php
 
-namespace andyp\labs\cpt\tutorial\REST;
-
+namespace andyp\cpt\tutorial\REST;
 /**
  * Return Metadata on post request to 
  * https://dev.pulse.londonparkour.com/wp-json/wp/v2/pulse

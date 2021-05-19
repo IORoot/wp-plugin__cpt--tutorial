@@ -1,6 +1,6 @@
 <?php
 
-namespace andyp\labs\cpt\tutorial\filters\transforms;
+namespace andyp\cpt\tutorial\filters\transforms;
 /**
  * Filters content for Markdown and converts it to HTML.
  */

@@ -1,13 +1,11 @@
 <?php
 
-namespace andyp\labs\cpt\tutorial;
+namespace andyp\cpt\tutorial;
 
 class initialise
 {
 
-    public $singular = 'tutorial'; //lowercase
-    public $svgdata_icon = 'data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEyLDNMMSw5TDEyLDE1TDIxLDEwLjA5VjE3SDIzVjlNNSwxMy4xOFYxNy4xOEwxMiwyMUwxOSwxNy4xOFYxMy4xOEwxMiwxN0w1LDEzLjE4WiIvPjwvc3ZnPg==';
-
+    private $config;
 
     public function run()
     {
@@ -23,11 +21,18 @@ class initialise
         $this->register_REST_metadata();
     }
 
+    public function set_config($config)
+    {
+        $this->config = $config;
+    }
+
     public function setup_cpt()
     {
         $this->cpt = new cpt\create_cpt;
-        $this->cpt->set_singular(ucfirst($this->singular));
-        $this->cpt->set_icon($this->svgdata_icon);
+        $this->cpt->set_singular(ucfirst($this->config['post_type']));
+        $this->cpt->set_icon($this->config['svgdata_icon']);
+        $this->cpt->set_category($this->config['category']);
+        $this->cpt->set_tags($this->config['tags']);
     }
     
     public function register_cpt()
@@ -51,17 +56,17 @@ class initialise
 
     public function add_admin_view()
     {
-        new filters\admin_archive_view_by_playlist_order($this->singular . '_category', $this->singular);
+        new filters\admin_archive_view_by_playlist_order($this->config['post_type'] . '_category', $this->config['post_type']);
     }
 
     public function register_template_folder()
     {
-        new filters\register_template_folder($this->singular);
+        new filters\register_template_folder($this->config['post_type']);
     }
 
     public function register_sidebar()
     {
-        new register\sidebar(ucfirst($this->singular));
+        new register\sidebar(ucfirst($this->config['post_type']));
     }
 
     public function isotope_filters()
@@ -71,7 +76,7 @@ class initialise
 
     public function enqueue_css()
     {
-        new filters\enqueue_css_in_footer($this->singular);
+        new filters\enqueue_css_in_footer($this->config['post_type']);
     }
 
     public function register_transform_filters()
@@ -88,5 +93,7 @@ class initialise
     {
         new REST\metadata;
     }
+
+
 
 }

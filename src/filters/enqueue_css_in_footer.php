@@ -1,6 +1,6 @@
 <?php
 
-namespace andyp\labs\cpt\tutorial\filters;
+namespace andyp\cpt\tutorial\filters;
 
 class enqueue_css_in_footer
 {
