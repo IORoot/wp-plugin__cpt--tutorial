@@ -1,4 +1,5 @@
 <?php
+
     $playlistPosition = null;
     $meta = get_post_meta($post->ID);
     if ($meta['playlistPosition'][0] != null){

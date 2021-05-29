@@ -12,6 +12,8 @@ while ( have_posts() ) :
 
 
 	<article class="">
+
+	<?php do_shortcode('[breadcrumb]'); ?>
 		
 	<?php include( __DIR__ . '/template-parts/title_description.php');  ?>  
 
