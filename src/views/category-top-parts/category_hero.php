@@ -42,7 +42,7 @@
         // │                                                                         │
         // └─────────────────────────────────────────────────────────────────────────┘
         ?>
-        <h1 class="font-semibold text-9xl font-serif"><?php echo ucfirst($current_term->name); ?></h1>
+        <h1 class="font-semibold text-7xl font-serif"><?php echo ucfirst($current_term->name); ?></h1>
 
         <?php
         // ┌─────────────────────────────────────────────────────────────────────────┐

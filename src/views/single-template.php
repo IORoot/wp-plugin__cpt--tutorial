@@ -13,11 +13,11 @@ while ( have_posts() ) :
 
 	<article class="">
 
-	<?php do_shortcode('[breadcrumb]'); ?>
+	<?php do_shortcode('[breadcrumb colour="green-500"]'); ?>
 		
-	<?php include( __DIR__ . '/template-parts/title_description.php');  ?>  
+	<?php include( __DIR__ . '/single-parts/title_description.php');  ?>  
 
-		<?php include( __DIR__ . '/template-parts/youtube_lite.php');  ?>  
+		<?php include( __DIR__ . '/single-parts/youtube_lite.php');  ?>  
 
 		<div class="flex py-3"> 
 
@@ -25,11 +25,11 @@ while ( have_posts() ) :
 
 			<div class="md:w-3/5">
 
-				<?php include( __DIR__ . '/template-parts/breadcrumbs.php');  ?>   
+				<?php include( __DIR__ . '/single-parts/breadcrumbs.php');  ?>   
 				
-				<?php include( __DIR__ . '/template-parts/transformed_content.php');  ?>   
+				<?php include( __DIR__ . '/single-parts/transformed_content.php');  ?>   
 
-				<?php include( __DIR__ . '/template-parts/youtube_link.php');  ?>  
+				<?php include( __DIR__ . '/single-parts/youtube_link.php');  ?>  
 
 			</div>
 

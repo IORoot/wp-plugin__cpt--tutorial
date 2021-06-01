@@ -17,63 +17,26 @@ foreach ($current_term->acf['meta_fields'] as $meta_field)
 include( get_stylesheet_directory() . '/src/assets/svgs/wavey-min.php');
 
 // -------------------------- TEMPLATE START ------------------------------
+
+if ($current_term->parent == 0){
+    include( __DIR__ . '/category-top-template.php');
+} else {
+    include( __DIR__ . '/category-sub-template.php');
+}
+
+
+
+// -------------------------- TEMPLATE END --------------------------------
 ?>
 
-
-    <main class="max-w-screen-xl m-auto block px-4 pb-40 relative">
-
-
-        <?php include( __DIR__ . '/template-parts/taxonomy_hero.php'); ?>
-
-        <?php do_shortcode('[breadcrumb]'); ?>
-
-        <div class="text-3xl my-20 whitespace-pre-line">
-        <?php 
-            if (!empty($current_term->description)){
-                echo $current_term->description;
-            }
-        ?>
-        </div>
-
-
-
-        <ul class="grid-ul">
-
-            <?php while (have_posts()) {
-                the_post();
-
-                // include( __DIR__ . '/template-parts/taxonomy_item.php');
-            ?>
-
-            <?php } ?>
-
-        </ul>
-
-    </main>
-
-    <div class="svgs">
-        <?php
-        include( get_stylesheet_directory() . '/src/assets/svgs/noise.svg');
-        include( get_stylesheet_directory() . '/src/assets/svgs/glyph-all.svg');
-        ?>
-    </div>
+<div class="svgs">
+    <?php
+    include( get_stylesheet_directory() . '/src/assets/svgs/noise.svg');
+    include( get_stylesheet_directory() . '/src/assets/svgs/glyph-all.svg');
+    ?>
+</div>
 
 <?php
 
-// -------------------------- TEMPLATE END --------------------------------
-
 get_footer();
 
-/**
- * Add Isotope at bottom.
- */
-$isotope_library = ANDYP_PAGEBUILDER_ISOTOPE_URL.'src/js/isotope.min.js';
-?>
-<script src="<?php echo $isotope_library; ?>"></script>
-<script>
-var elem = document.querySelector('.grid-ul');
-var iso = new Isotope( elem, {
-    itemSelector: '.grid-item',
-    layoutMode: 'fitRows'
-});
-</script>

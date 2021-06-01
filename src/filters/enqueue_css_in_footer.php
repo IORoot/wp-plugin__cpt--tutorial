@@ -18,10 +18,10 @@ class enqueue_css_in_footer
      */
     public function register_css() {
 
-        if (is_singular($this->page_type))
-        {
+        // if (is_singular($this->page_type))
+        // {
             wp_enqueue_style( $this->page_type.'-style', ANDYP_CPT_TUTORIAL_URL . 'src/css/style.css' );
-        }
+        // }
         
     }
 
