@@ -90,12 +90,6 @@ class initialise
         // Add tailwind classes
         new filters\transforms\tailwind;
 
-        // Change Paragraph one
-        // new filters\transforms\p_1;
-
-        // Remove the top H2 if present.
-        // new filters\transforms\h2_remove;
-
         // Remove any moustache tags in the description.
         new filters\transforms\tag_hide;
     }

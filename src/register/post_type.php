@@ -15,7 +15,6 @@ class post_type
 
 
 
-
 	/**
 	 * Capitalized.
 	 * 

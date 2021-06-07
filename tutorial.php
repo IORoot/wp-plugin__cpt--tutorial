@@ -2,7 +2,7 @@
 
 /*
  * @wordpress-plugin
- * Plugin Name:       _ANDYP - Labs - CPT - Tutorial
+ * Plugin Name:       _ANDYP - CPT - Tutorial
  * Plugin URI:        http://londonparkour.com
  * Description:       <strong>📬CPT</strong> | Adds Labs CPT - Tutorials
  * Version:           1.0.0
@@ -11,7 +11,7 @@
  * Domain Path:       /languages
  */
 
- // ┌─────────────────────────────────────────────────────────────────────────┐
+// ┌─────────────────────────────────────────────────────────────────────────┐
 // │                            CONFIGURATION                                │
 // └─────────────────────────────────────────────────────────────────────────┘
 $config = [

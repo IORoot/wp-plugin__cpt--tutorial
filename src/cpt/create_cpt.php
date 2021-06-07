@@ -38,7 +38,6 @@ class create_cpt
         $this->tags = $tags;
     }
 
-
     public function register()
     {
         $this->register_taxonomy();
@@ -46,7 +45,6 @@ class create_cpt
         $this->setup_cpt();
         $this->register_cpt();
     }
-
 
     public function register_taxonomy()
     {
