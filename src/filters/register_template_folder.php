@@ -25,6 +25,9 @@ class register_template_folder
         global $wp_query;
         global $post;
 
+        // check we are registering for 'tutorial' only.
+        if ( $post->post_type !=  $this->post_type){ return $template; }
+
         if (is_archive())
         {
             $new_template = ANDYP_CPT_TUTORIAL_PATH . '/src/views/archive-template.php';

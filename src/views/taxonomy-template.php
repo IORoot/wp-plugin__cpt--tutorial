@@ -14,8 +14,6 @@ foreach ($current_term->acf['meta_fields'] as $meta_field)
     $current_term->acf['meta_fields'][$name] = $value;
 }
 
-include( get_stylesheet_directory() . '/src/assets/svgs/wavey-min.php');
-
 // -------------------------- TEMPLATE START ------------------------------
 
 if ($current_term->parent == 0){
@@ -31,6 +29,7 @@ if ($current_term->parent == 0){
 
 <div class="svgs">
     <?php
+    include( get_stylesheet_directory() . '/src/assets/svgs/wavey-min.php');
     include( get_stylesheet_directory() . '/src/assets/svgs/noise.svg');
     include( get_stylesheet_directory() . '/src/assets/svgs/glyph-all.svg');
     ?>
