@@ -4,11 +4,7 @@
     $current_term_acf_image = $current_term->acf['featured_image']['url'];
 
     // The current category ACF SVG Name
-    foreach ($current_term->acf['meta_fields'] as $meta_field)
-    {
-        if ($meta_field['meta_field_name'] != 'SVG Glyph'){ continue; }
-        $current_term_acf_svg_name = $meta_field['meta_field_value'];
-    }
+    $current_term_acf_svg_name = $current_term->acf['meta_fields']['SVG Glyph'];
 
     // Is this category a top-level category.
     $is_parent = false;
