@@ -81,10 +81,22 @@ class initialise
 
     public function register_transform_filters()
     {
+        // Convert description from markdown to HTML
+        new filters\transforms\youtube_description;
+
+        // Convert description from markdown to HTML
         new filters\transforms\parsedown;
+
+        // Add tailwind classes
         new filters\transforms\tailwind;
-        new filters\transforms\p_1;
-        new filters\transforms\h2_remove;
+
+        // Change Paragraph one
+        // new filters\transforms\p_1;
+
+        // Remove the top H2 if present.
+        // new filters\transforms\h2_remove;
+
+        // Remove any moustache tags in the description.
         new filters\transforms\tag_hide;
     }
 

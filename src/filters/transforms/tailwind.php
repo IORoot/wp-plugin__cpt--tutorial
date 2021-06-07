@@ -50,36 +50,42 @@ class tailwind {
     }
 
 
+    public function h2()
+    {
+        return 'text-4xl my-10 font-thin';
+    }
+
     public function h3()
     {
-        return 'text-5xl mb-12 font-thin';
+        return 'text-3xl my-10 font-thin';
     }
-
-
-    public function hr()
-    {
-        return 'border-goo my-24 border-4';
-    }
-
 
     public function p()
     {
-        return 'text-2xl lg:w-4/5 mb-4 leading-relaxed';
+        return 'text-2xl mb-4 leading-relaxed';
     }
+
+    public function hr()
+    {
+        return 'border-green-500 my-20 border-2';
+    }
+
+
+
 
     public function ul()
     {
-        return 'text-xl list-outside list-disc bg-night my-12 px-12 pt-12 pb-8 lg:w-4/5';
+        return 'text-xl list-outside list-disc bg-gray-100 p-6 pl-12 my-10';
     }
 
     public function ol()
     {
-        return 'text-xl list-outside list-decimal bg-night my-12 px-12 pt-12 pb-8 lg:w-4/5';
+        return 'text-xl list-outside list-decimal bg-gray-100 p-6 pl-12 my-10';
     }
 
     public function li()
     {
-        return 'pb-4 leading-relaxed';
+        return 'text-2xl pl-4 pb-4 leading-relaxed';
     }
 
 

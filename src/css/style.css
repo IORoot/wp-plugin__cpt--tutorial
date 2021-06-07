@@ -1,24 +1,3 @@
-/**
-
-    This controls the opening of the 1/3 subcategory boxes
-    on each category page.
-
-*/
-.subcat_box:hover .subcat_sidebar { 
-    width: 100%;
-    background: #22C55E;
-}
-.subcat_box:hover .subcat_sidebar .glyph { 
-    width: 100%;
-    height: 100%;
-    top: 0rem;
-    left: 0rem;
-    opacity: 0.25;
-}
-.subcat_box:hover .subcat_text { 
-    margin-bottom: 5rem;
-}
-
 /*
     * Full Height vertical line
     *

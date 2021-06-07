@@ -8,7 +8,7 @@ class parsedown {
 
     public function __construct()
     {
-        add_filter('cpt_tutorial_transforms', [$this, 'callback'], 10, 1 );
+        add_filter('cpt_tutorial_transforms', [$this, 'callback'], 15, 1 );
     }
 
     public function callback($text)

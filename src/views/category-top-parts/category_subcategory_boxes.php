@@ -28,7 +28,7 @@ if (count($sub_terms) == 0){ return; }
             /**
              * Include the item, formatted in HTML.
              */
-            include( __DIR__ . '/category_subcategory_item.php');
+            include( __DIR__ . '/category_subcategory_cards.php');
 
         }
     ?>

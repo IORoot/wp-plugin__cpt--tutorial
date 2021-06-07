@@ -14,7 +14,11 @@ class tag_hide {
 
     public function callback($text)
     {
-        return preg_replace('/\" >tag/i',' hidden">tag',$text);
+        $text = preg_replace('/\" >tag/i',' hidden">tag',$text);
+
+        $text = preg_replace('/tag:.*/i','',$text);
+
+        return $text;
     }
 
 }

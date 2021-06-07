@@ -1,63 +1,75 @@
-<?php 
-// -------------------------- CATEGORY TEMPLATE START ------------------------------
-?>
-
-
-    <main class="max-w-screen-xl m-auto block px-4 pb-40 relative">
-
-        <?php
-        // ┌─────────────────────────────────────────────────────────────────────────┐
-        // │                                                                         │
-        // │                                TOP HERO                                 │
-        // │                                                                         │
-        // └─────────────────────────────────────────────────────────────────────────┘
-        ?>
-        <?php include( __DIR__ . '/category-top-parts/category_hero.php'); ?>
-
-        <?php
-        // ┌─────────────────────────────────────────────────────────────────────────┐
-        // │                                                                         │
-        // │                                BREADCRUMBS                              │
-        // │                                                                         │
-        // └─────────────────────────────────────────────────────────────────────────┘
-        ?>
-        <?php do_shortcode('[breadcrumb colour="green-500"]'); ?>
-
-        <?php
-        // ┌─────────────────────────────────────────────────────────────────────────┐
-        // │                                                                         │
-        // │                        ANY SUB-CATEGORIES (SERIES)                      │
-        // │                                                                         │
-        // └─────────────────────────────────────────────────────────────────────────┘
-        ?>
-        <?php include( __DIR__ . '/category-top-parts/category_subcategory_boxes.php'); ?>
-
-        <?php
-        // ┌─────────────────────────────────────────────────────────────────────────┐
-        // │                                                                         │
-        // │                        THE CATEGORY DESCRIPTION                         │
-        // │                                                                         │
-        // └─────────────────────────────────────────────────────────────────────────┘
-        ?>
-        <?php include( __DIR__ . '/category-top-parts/category_description.php'); ?>
-
-
-        <?php
-        // ┌─────────────────────────────────────────────────────────────────────────┐
-        // │                                                                         │
-        // │ 						TUTORIALS, DEMOS AND BLOG                        │
-        // │                                                                         │
-        // └─────────────────────────────────────────────────────────────────────────┘
-        ?>
-        <h2 class="text-2xl mb-4 mt-40">Explore other series</h2>
-        <div class="w-full flex gap-10 ">
-            <?php include( __DIR__ . '/generic-parts/tutorials_demos_blog.php'); ?>
-
-        </div>
-
-    </main>
-
-
 <?php
 
-// -------------------------- TEMPLATE END --------------------------------
+    $published = human_time_diff( get_the_time( 'U', $post ), current_time( 'timestamp' ) ) . ' ago.';
+    $category  = get_the_term_list($post->ID, 'tutorial_category');
+    $tags      = get_the_term_list($post->ID, 'tutorial_tags');
+
+    $position  = get_post_meta($post->ID, 'playlistPosition');
+    $cat       = get_the_terms($post, 'tutorial_category');
+    $episode   = ($position[0] + 1) . ' / ' . $cat[0]->count;
+    
+?>
+
+<div class="flex flex-col">
+
+    <div class="flex-1 flex gap-4 mb-4">
+
+        <?php   
+        // ┌─────────────────────────────────────────────────────────────────────────┐
+        // │                                                                         │
+        // │                            PUBLISHED DATE                               │
+        // │                                                                         │
+        // └─────────────────────────────────────────────────────────────────────────┘
+        ?>
+        <div class="w-1/2 bg-gray-200 rounded-2xl p-4">
+            <div class="font-semibold">Published</div>
+            <div class="font-thin"><?php echo $published; ?></div>
+        </div>
+
+        <?php   
+        // ┌─────────────────────────────────────────────────────────────────────────┐
+        // │                                                                         │
+        // │                               CATEGORY                                  │
+        // │                                                                         │
+        // └─────────────────────────────────────────────────────────────────────────┘
+        ?>
+        <div class="w-1/2 bg-gray-200 rounded-2xl p-4">
+            <div class="font-semibold">Category</div>
+            <div class="font-thin capitalize underline"><?php echo $category; ?></div>
+        </div>
+
+
+
+    </div>
+    <div class="flex-1 flex mb-6 gap-4">
+
+        <?php   
+        // ┌─────────────────────────────────────────────────────────────────────────┐
+        // │                                                                         │
+        // │                                   TAGS                                  │
+        // │                                                                         │
+        // └─────────────────────────────────────────────────────────────────────────┘
+        ?>
+        <div class="w-1/2 bg-gray-200 rounded-2xl p-4">
+            <div class="font-semibold">Tags</div>
+            <div class="font-thin capitalize underline"><?php echo $tags; ?></div>
+        </div>
+
+        <?php   
+        // ┌─────────────────────────────────────────────────────────────────────────┐
+        // │                                                                         │
+        // │                               EPISODE                                   │
+        // │                                                                         │
+        // └─────────────────────────────────────────────────────────────────────────┘
+        ?>
+        <div class="w-1/2 bg-gray-200 rounded-2xl p-4">
+            <div class="font-semibold">Episode</div>
+            <div class="font-thin"><?php 
+                echo $episode;
+            ?></div>
+        </div>
+
+
+
+    </div>
+</div>
