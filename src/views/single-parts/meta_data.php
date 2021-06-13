@@ -1,8 +1,8 @@
 <?php
 
     $published = human_time_diff( get_the_time( 'U', $post ), current_time( 'timestamp' ) ) . ' ago.';
-    $category  = get_the_term_list($post->ID, 'tutorial_category');
-    $tags      = get_the_term_list($post->ID, 'tutorial_tags');
+    $category  = get_the_term_list($post->ID, 'tutorial_category', '<span class="pr-2 hover:text-green-500">','</span><span class="pr-2 hover:text-green-500">', '</span>');
+    $tags      = get_the_term_list($post->ID, 'tutorial_tags', '<span class="pr-2 hover:text-green-500">','</span><span class="pr-2 hover:text-green-500">', '</span>');
 
     $position  = get_post_meta($post->ID, 'playlistPosition');
     $cat       = get_the_terms($post, 'tutorial_category');
