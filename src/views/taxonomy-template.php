@@ -16,12 +16,21 @@ foreach ($current_term->acf['meta_fields'] as $meta_field)
 
 // -------------------------- TEMPLATE START ------------------------------
 
-if ($current_term->parent == 0){
-    include( __DIR__ . '/category-top-template.php');
-} else {
-    include( __DIR__ . '/category-sub-template.php');
+
+if ($current_term->taxonomy == 'tutorial_tags'){
+    include( __DIR__ . '/tag-template.php');
 }
 
+
+if ($current_term->taxonomy == 'tutorial_category') {
+
+    if ($current_term->parent == 0){
+        include( __DIR__ . '/category-top-template.php');
+    } else {
+        include( __DIR__ . '/category-sub-template.php');
+    }
+
+}
 
 
 // -------------------------- TEMPLATE END --------------------------------

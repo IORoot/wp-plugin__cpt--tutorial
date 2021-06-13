@@ -28,12 +28,6 @@ class register_template_folder
         // check we are registering for 'tutorial' only.
         if ( $post->post_type !=  $this->post_type){ return $template; }
 
-        if (is_archive())
-        {
-            $new_template = ANDYP_CPT_TUTORIAL_PATH . '/src/views/archive-template.php';
-            if (file_exists($new_template)) { $template = $new_template; }
-        }
-
         if (is_tax())
         {
             $new_template = ANDYP_CPT_TUTORIAL_PATH . '/src/views/taxonomy-template.php';

@@ -2,7 +2,7 @@
 
 ?>
 
-<h2 class="text-5xl mb-20">Videos in this Series</h2>
+<h2 class="text-5xl mb-20">Video Listing</h2>
 
 <ul class="grid-ul flex flex-wrap -mr-20">
 
