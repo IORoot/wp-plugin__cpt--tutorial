@@ -80,7 +80,7 @@
         // │                                                                         │
         // └─────────────────────────────────────────────────────────────────────────┘
         ?>
-        <p class="font-light w-3/4 mt-4"><?php echo $current_term->acf['meta_fields']['Excerpt']; ?></p>
+        <p class="font-light w-full md:w-3/4 mt-4"><?php echo $current_term->acf['meta_fields']['Excerpt']; ?></p>
     </div>
 
     <?php
