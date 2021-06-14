@@ -24,12 +24,12 @@
     // │                                                                         │
     // └─────────────────────────────────────────────────────────────────────────┘
     ?>
-    <svg class="z-50 absolute fill-gray-500 top-10 left-10 w-10 h-10">
+    <svg class="z-50 absolute fill-gray-500 top-4 md:top-10 left-4 md:left-10 w-10 h-10">
 		<use xlink:href="#<?php echo $current_term->acf['meta_fields']['SVG Glyph']; ?>"></use>
 	</svg>
 
 
-    <div class="z-40 absolute bottom-10 left-10 w-1/2">
+    <div class="z-40 absolute bottom-0 left-0 p-4 md:p-10 w-full md:w-1/2">
 
         <?php
         // ┌─────────────────────────────────────────────────────────────────────────┐
@@ -38,7 +38,7 @@
         // │                                                                         │
         // └─────────────────────────────────────────────────────────────────────────┘
         ?>
-        <h1 class="font-semibold text-7xl font-serif"><?php echo ucfirst($current_term->name); ?></h1>
+        <h1 class="font-semibold text-4xl md:text-7xl font-serif"><?php echo ucfirst($current_term->name); ?></h1>
 
         <?php
         // ┌─────────────────────────────────────────────────────────────────────────┐
@@ -90,7 +90,7 @@
     // │                                                                         │
     // └─────────────────────────────────────────────────────────────────────────┘
     ?>
-    <img class="z-30 absolute top-0 right-40 h-96" src="<?php echo $current_term_acf_image; ?>">
+    <img class="z-30 absolute top-0 right-0 lg:right-40 h-40 sm:h-80 md:h-96" src="<?php echo $current_term_acf_image; ?>">
 
     <?php
     // ┌─────────────────────────────────────────────────────────────────────────┐
@@ -99,7 +99,7 @@
     // │                                                                         │
     // └─────────────────────────────────────────────────────────────────────────┘
     ?>
-    <div class="z-20 wavey-min bg-right-bottom bg-no-repeat absolute right-0 bottom-0 mix-blend-screen" style="width:150%; height:150%"></div>
+    <div class="z-20 wavey-min bg-right-bottom bg-no-repeat absolute right-0 bottom-0 mix-blend-screen hidden md:block" style="width:150%; height:150%"></div>
 
     <?php
     // ┌─────────────────────────────────────────────────────────────────────────┐
@@ -108,7 +108,7 @@
     // │                                                                         │
     // └─────────────────────────────────────────────────────────────────────────┘
     ?>
-    <svg class="z-10 absolute fill-green-600 -top-1/2 -left-1/2 " style="width:200%; height:200%;">
+    <svg class="z-10 absolute fill-green-600 -top-1/2 -left-1/2 opacity-20 md:opacity-100" style="width:200%; height:200%;">
 		<use xlink:href="#<?php echo $current_term->acf['meta_fields']['SVG Glyph']; ?>"></use>
 	</svg>
 

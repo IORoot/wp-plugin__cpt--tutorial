@@ -5,7 +5,7 @@
      * 
      */
 ?>
-<div class="w-1/4 ">
+<div class="w-full">
 
 
     <a href="<?php echo get_term_link($current_term); ?>" class="subcat_box flex flex-col h-80 mb-4 rounded-2xl relative overflow-hidden bg-gray-200 text-black fill-green-500 hover:text-white hover:fill-white hover:bg-tutorial-500 hover:animate-pulse">

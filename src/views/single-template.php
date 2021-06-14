@@ -88,11 +88,8 @@ while ( have_posts() ) :
 			// │                                                                         │
 			// └─────────────────────────────────────────────────────────────────────────┘
 			?>
-			<div class="w-full flex gap-10">
+			<?php include( __DIR__ . '/generic-parts/tutorials_demos_blog.php'); ?>
 
-				<?php include( __DIR__ . '/generic-parts/tutorials_demos_blog.php'); ?>
-
-			</div>
 
 		</div>
 
