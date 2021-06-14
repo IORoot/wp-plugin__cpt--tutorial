@@ -2,7 +2,7 @@
 
 ?>
 
-<div class="w-1/3 pl-10">
+<div class="w-full lg:w-1/3 lg:pl-10">
 
     <h2 class="text-2xl mb-4">Videos Listing</h2>
 

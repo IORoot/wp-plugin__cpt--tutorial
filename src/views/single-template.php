@@ -16,7 +16,7 @@ while ( have_posts() ) :
 	?>
 
 
-	<article class="max-w-screen-xl m-auto block pb-40 relative">
+	<article class="max-w-screen-xl mx-4 xl:m-auto block pb-40 relative">
 
 		<?php   
 		// ┌─────────────────────────────────────────────────────────────────────────┐
@@ -39,7 +39,7 @@ while ( have_posts() ) :
 			<?php do_shortcode('[breadcrumb colour="green-500"]');  ?>
 		</div>
 
-		<div class="w-full flex mb-40">
+		<div class="w-full flex flex-col lg:flex-row mb-40 mt-40 md:mt-0">
 			<?php   
 			// ┌─────────────────────────────────────────────────────────────────────────┐
 			// │                                                                         │
@@ -47,7 +47,7 @@ while ( have_posts() ) :
 			// │                                                                         │
 			// └─────────────────────────────────────────────────────────────────────────┘
 			?>
-			<div class="w-2/3">
+			<div class="w-full sm:w-2/3">
 				<?php include( __DIR__ . '/single-parts/title.php');  ?>   
 				<?php include( __DIR__ . '/single-parts/transformed_content.php');  ?>   
 			</div>
@@ -74,7 +74,7 @@ while ( have_posts() ) :
 			// └─────────────────────────────────────────────────────────────────────────┘
 			?>
 			<h2 class="text-2xl mb-4">Explore other series</h2>
-			<div class="w-full flex gap-10 mb-10">
+			<div class="w-full flex flex-col md:flex-row gap-4 mb-10">
 
 				<?php include( __DIR__ . '/single-parts/related_series.php'); ?>
 
