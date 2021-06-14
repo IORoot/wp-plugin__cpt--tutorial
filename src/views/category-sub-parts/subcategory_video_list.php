@@ -2,7 +2,7 @@
 
 ?>
 
-<div class="w-1/3 pl-4">
+<div class="w-1/3 pl-4 hidden lg:block">
 
     <h2 class="text-5xl mb-20">Videos Listing</h2>
 

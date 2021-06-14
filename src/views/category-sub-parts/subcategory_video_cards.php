@@ -4,7 +4,7 @@
 
 <h2 class="text-5xl mb-20">Video Listing</h2>
 
-<ul class="grid-ul flex flex-wrap -mr-20">
+<ul class="grid-ul flex flex-wrap xl:-mr-20">
 
 <?php foreach ($posts as $loop_key => $post) {  
     $post->meta = get_post_meta($post->ID);
